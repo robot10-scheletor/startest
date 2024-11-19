@@ -170,3 +170,101 @@ minetest.register_node("startest:aiurite_ore", {
     groups = {cracky=1, stone=1},
     drop = "startest:aiurite_fragment"
 })
+
+minetest.register_node("startest:liquid_gas", {
+	description = "Liquid Gas",
+	drawtype = "liquid",
+	waving = 3,
+	tiles = {
+		{
+			name = "liquid_gas.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+		{
+			name = "liquid_gas.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "source",
+	liquid_alternative_flowing = "startest:flowing_gas",
+	liquid_alternative_source = "startest:liquid_gas",
+	liquid_viscosity = 1,
+	post_effect_color = {a = 0, r = 0, g = 160, b = 0},
+	groups = {water = 3, liquid = 3, cools_lava = 1},
+	sounds = default.node_sound_water_defaults(),
+})
+
+minetest.register_node("startest:flowing_gas", {
+	description = "Flowing Gas",
+	drawtype = "flowingliquid",
+	waving = 3,
+	tiles = {"liquid_gas.png"},
+	special_tiles = {
+		{
+			name = "liquid_gas.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+		{
+			name = "liquid_gas.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	paramtype2 = "flowingliquid",
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "flowing",
+	liquid_alternative_flowing = "startest:flowing_gas",
+	liquid_alternative_source = "startest:liquid_gas",
+	liquid_viscosity = 1,
+	post_effect_color = {a = 0, r = 0, g = 160, b = 0},
+	groups = {water = 3, liquid = 3, not_in_creative_inventory = 1,
+		cools_lava = 1},
+	sounds = default.node_sound_water_defaults(),
+})
+
+minetest.register_node("startest:cracked_stone_with_gas", {
+    description = "Deep Space Stone",
+    tiles = {"cracked_stone_with_gas.png", "default_stone.png", "default_stone.png", "default_stone.png", "default_stone.png", "default_stone.png"},
+    groups = {cracky=1, stone=1},
+    drop = ""
+})
