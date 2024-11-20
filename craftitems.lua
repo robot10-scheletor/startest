@@ -62,3 +62,8 @@ minetest.register_craftitem("startest:aiurite_fragment", {
 	description = "Aiurite Fragment",
 	inventory_image = "aiurite_fragment.png",
 })
+
+minetest.register_craftitem("startest:gas_drop", {
+	description = "Gas Drop",
+	inventory_image = "gas_drop.png",
+})

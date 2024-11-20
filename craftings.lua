@@ -106,6 +106,15 @@ minetest.register_craft({
     }
 })
 
+minetest.register_craft({
+    output = "startest:gas_extractor",
+    recipe = {
+        {"default:steel_ingot", "", ""},
+        {"", "default:steel_ingot", "startest:space_crystal"},
+        {"", "", "default:steel_ingot"}
+    }
+})
+
 if minetest.get_modpath("3d_armor") then
 
     minetest.register_craft({
