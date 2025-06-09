@@ -263,7 +263,7 @@ minetest.register_node("startest:flowing_gas", {
 })
 
 minetest.register_node("startest:cracked_stone_with_gas", {
-    description = "Deep Space Stone",
+    description = "Cracked Stone With Gas",
     tiles = {"cracked_stone_with_gas.png", "default_stone.png", "default_stone.png", "default_stone.png", "default_stone.png", "default_stone.png"},
     groups = {cracky=1, stone=1},
     drop = ""

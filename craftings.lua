@@ -109,9 +109,9 @@ minetest.register_craft({
 minetest.register_craft({
     output = "startest:gas_extractor",
     recipe = {
-        {"default:steel_ingot", "", ""},
-        {"", "default:steel_ingot", "startest:space_crystal"},
-        {"", "", "default:steel_ingot"}
+        {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "default:furnace", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"}
     }
 })
 
