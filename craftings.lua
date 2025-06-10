@@ -71,7 +71,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-    output = "startest:reinforced_steel_ingot 4",
+    output = "startest:reinforced_steel_ingot 16",
     recipe = {
         {"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
         {"default:steel_ingot", "startest:atomic_reinforcer", "default:steel_ingot"},
@@ -112,6 +112,33 @@ minetest.register_craft({
         {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"},
         {"startest:reinforced_steel_ingot", "default:furnace", "startest:reinforced_steel_ingot"},
         {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:reinforced_glass 16",
+    recipe = {
+        {"default:glass", "startest:gas_drop", "default:glass"},
+        {"default:glass", "startest:reinforced_steel_ingot", "default:glass"},
+        {"default:glass", "default:glass", "default:glass"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:drill",
+    recipe = {
+        {"startest:reinforced_steel_ingot", "startest:gas_drop", "startest:reinforced_glass"},
+        {"", "startest:reinforced_steel", "default:stone"},
+        {"", "startest:atomic_reinforcer", "startest:reinforced_steel_ingot"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:drill",
+    recipe = {
+        {"startest:reinforced_steel_ingot", "startest:gas_drop", "startest:reinforced_glass"},
+        {"", "startest:reinforced_steel", "default:stone"},
+        {"", "startest:dense_space_crystal", "startest:reinforced_steel_ingot"}
     }
 })
 

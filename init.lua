@@ -14,6 +14,8 @@ dofile(MP.."/craftings.lua")
 
 dofile(MP.."/extractor.lua")
 
+dofile(MP.."/tools.lua")
+
 if minetest.get_modpath("3d_armor") then
 	dofile(MP.."/armor.lua")
 end
