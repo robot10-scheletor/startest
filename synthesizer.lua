@@ -76,7 +76,7 @@ minetest.register_abm({
 
 minetest.register_node("startest:synthesizer", {
     description = "Synthesizer",
-    tiles = {"gas_collector_up.png", "gas_collector_down.png", "gas_collector_side.png", "gas_collector_side.png", "gas_collector_side.png", "gas_collector_side.png"},
+    tiles = {"synthesizer_top.png", "synthesizer_down.png", "synthesizer_side.png", "synthesizer_side.png", "synthesizer_side.png", "synthesizer_side.png"},
     groups = {cracky=1, stone=1},
     on_rightclick = on_rightclick,
     allow_metadata_inventory_move = allow_metadata_inventory_move,

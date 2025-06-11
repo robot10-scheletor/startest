@@ -268,3 +268,29 @@ minetest.register_node("startest:cracked_stone_with_gas", {
     groups = {cracky=1, stone=1},
     drop = ""
 })
+
+minetest.register_node("startest:engine_core", {
+	description = "Engine Core",
+	drawtype = "glasslike_framed_optional",
+	tiles = {"engine_core.png"},
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	sounds = default.node_sound_glass_defaults(),
+	drop = "startest:engine_core",
+	light_source = 2
+})
+
+minetest.register_node("startest:engine", {
+	description = "Engine",
+	drawtype = "glasslike_framed_optional",
+	tiles = {"engine.png"},
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	sounds = default.node_sound_glass_defaults(),
+	drop = "startest:engine",
+	light_source = 3
+})

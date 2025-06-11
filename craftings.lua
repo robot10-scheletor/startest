@@ -143,7 +143,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-    output = "startest:gas_vial",
+    output = "startest:gas_vial 30",
     recipe = {
         {"startest:reinforced_glass", "startest:gas_drop", "startest:reinforced_glass"},
         {"startest:reinforced_glass", "startest:gas_drop", "startest:reinforced_glass"},
@@ -172,9 +172,99 @@ minetest.register_craft({
 minetest.register_craft({
     output = "startest:synthesizer",
     recipe = {
-        {"startest:reinforced_steel_ingot", "startest:gas_drop", "startest:reinforced_glass"},
-        {"", "startest:reinforced_steel", "default:cobble"},
-        {"", "startest:dense_space_crystal", "startest:reinforced_steel_ingot"}
+        {"startest:reinforced_steel_ingot", "startest:reinforced_glass", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "startest:engine", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "startest:reinforced_glass", "startest:reinforced_steel_ingot"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:fuel 2",
+    recipe = {
+        {"startest:space_crystal", "startest:gas_vial", "startest:space_crystal"},
+        {"startest:gas_vial", "startest:reinforced_steel_ingot", "startest:gas_vial"},
+        {"startest:space_crystal", "startest:gas_vial", "startest:space_crystal"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:engine_core",
+    recipe = {
+        {"startest:reinforced_steel_ingot", "startest:fuel", "startest:reinforced_steel_ingot"},
+        {"startest:fuel", "startest:stack_of_gas_vials", "startest:fuel"},
+        {"startest:reinforced_steel_ingot", "startest:fuel", "startest:reinforced_steel_ingot"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:scissor",
+    recipe = {
+        {"startest:space_crystal", "startest:aiurite_fragment", "startest:space_crystal"},
+        {"startest:reinforced_steel_ingot", "startest:dense_space_crystal", "startest:reinforced_steel_ingot"},
+        {"startest:space_crystal", "startest:reinforced_glass", "startest:space_crystal"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:engine",
+    recipe = {
+        {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "startest:engine_core", "startest:reinforced_steel_ingot"},
+        {"startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot", "startest:reinforced_steel_ingot"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:space_energy 10",
+    recipe = {
+        {"", "", ""},
+        {"startest:atomic_reinforcer", "startest:scissor", ""},
+        {"", "", ""}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:corruptor",
+    recipe = {
+        {"startest:reinforced_glass", "startest:reinforced_glass", ""},
+        {"startest:gas_drop", "startest:space_energy", "startest:reinforced_glass"},
+        {"startest:reinforced_glass", "startest:reinforced_glass", ""}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:corrupted_aiurite_fragment 8",
+    recipe = {
+        {"startest:aiurite_fragment", "startest:aiurite_fragment", "startest:aiurite_fragment"},
+        {"startest:aiurite_fragment", "startest:corrupted_energy", "startest:aiurite_fragment"},
+        {"startest:aiurite_fragment", "startest:aiurite_fragment", "startest:aiurite_fragment"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:corrupted_energy 8",
+    recipe = {
+        {"startest:space_energy", "startest:space_energy", "startest:space_energy"},
+        {"startest:space_energy", "startest:corruptor", "startest:space_energy"},
+        {"startest:space_energy", "startest:space_energy", "startest:space_energy"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:charged_fuel",
+    recipe = {
+        {"", "", ""},
+        {"startest:fuel", "startest:aiurite_fragment", ""},
+        {"", "", ""}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:hyper_charged_fuel",
+    recipe = {
+        {"", "", ""},
+        {"startest:charged_fuel", "startest:corrupted_aiurite_fragment", ""},
+        {"", "", ""}
     }
 })
 

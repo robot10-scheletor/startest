@@ -82,3 +82,43 @@ minetest.register_craftitem("startest:stack_of_gas_vials", {
 	description = "Stack Of Gas Vials",
 	inventory_image = "stack_of_gas_vials.png",
 })
+
+minetest.register_craftitem("startest:corruptor", {
+	description = "Corruptor",
+	inventory_image = "corruptor.png",
+})
+
+minetest.register_craftitem("startest:fuel", {
+	description = "Fuel",
+	inventory_image = "fuel.png",
+})
+
+minetest.register_craftitem("startest:space_energy", {
+	description = "Space Energy",
+	inventory_image = "space_energy.png",
+})
+
+minetest.register_craftitem("startest:scissor", {
+	description = "Scissor",
+	inventory_image = "scissor.png",
+})
+
+minetest.register_craftitem("startest:corrupted_aiurite_fragment", {
+	description = "Corrupted Aiurite Fragment",
+	inventory_image = "corrupted_aiurite_fragment.png",
+})
+
+minetest.register_craftitem("startest:corrupted_energy", {
+	description = "Corrupted Energy",
+	inventory_image = "corrupted_energy.png",
+})
+
+minetest.register_craftitem("startest:charged_fuel", {
+	description = "Charged Fuel",
+	inventory_image = "charged_fuel.png",
+})
+
+minetest.register_craftitem("startest:hyper_charged_fuel", {
+	description = "Hyper Charged Fuel",
+	inventory_image = "hyper_charged_fuel.png",
+})
