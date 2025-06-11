@@ -142,6 +142,42 @@ minetest.register_craft({
     }
 })
 
+minetest.register_craft({
+    output = "startest:gas_vial",
+    recipe = {
+        {"startest:reinforced_glass", "startest:gas_drop", "startest:reinforced_glass"},
+        {"startest:reinforced_glass", "startest:gas_drop", "startest:reinforced_glass"},
+        {"startest:reinforced_glass", "startest:reinforced_glass", "startest:reinforced_glass"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:empty_stack_of_gas_vials",
+    recipe = {
+        {"", "", "default:steel_ingot"},
+        {"", "default:steel_ingot", ""},
+        {"default:steel_ingot", "", ""}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:stack_of_gas_vials",
+    recipe = {
+        {"startest:gas_vial", "startest:gas_vial", "startest:gas_vial"},
+        {"", "startest:empty_stack_of_gas_vials", ""},
+        {"startest:gas_vial", "startest:gas_vial", "startest:gas_vial"}
+    }
+})
+
+minetest.register_craft({
+    output = "startest:synthesizer",
+    recipe = {
+        {"startest:reinforced_steel_ingot", "startest:gas_drop", "startest:reinforced_glass"},
+        {"", "startest:reinforced_steel", "default:cobble"},
+        {"", "startest:dense_space_crystal", "startest:reinforced_steel_ingot"}
+    }
+})
+
 if minetest.get_modpath("3d_armor") then
 
     minetest.register_craft({

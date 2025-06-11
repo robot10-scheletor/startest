@@ -67,3 +67,18 @@ minetest.register_craftitem("startest:gas_drop", {
 	description = "Gas Drop",
 	inventory_image = "gas_drop.png",
 })
+
+minetest.register_craftitem("startest:gas_vial", {
+	description = "Gas Vial",
+	inventory_image = "gas_vial.png",
+})
+
+minetest.register_craftitem("startest:empty_stack_of_gas_vials", {
+	description = "Empty Stack Of Gas Vials",
+	inventory_image = "empty_stack_of_gas_vials.png",
+})
+
+minetest.register_craftitem("startest:stack_of_gas_vials", {
+	description = "Stack Of Gas Vials",
+	inventory_image = "stack_of_gas_vials.png",
+})
